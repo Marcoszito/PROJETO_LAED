@@ -1,23 +1,23 @@
 /*
- * MÛdulos em C com raylib
+ * M√≥dulos em C com raylib
  * ---------------------------------------------------------------
- * EvoluÁ„o da atividade7: o tipo Entidade e suas operaÁıes b·sicas
- * (criar, colidir, desenhar, aplicar dano) foram extraÌdos para um
- * M”DULO separado (entidade.h + entidade.c). Este arquivo (o
- * programa principal) apenas INCLUI o cabeÁalho e usa a interface
- * p˙blica do mÛdulo -- ele n„o precisa saber COMO essas funÁıes s„o
+ * Evolu√ß√£o da atividade7: o tipo Entidade e suas opera√ß√µes b√°sicas
+ * (criar, colidir, desenhar, aplicar dano) foram extra√≠dos para um
+ * M√ìDULO separado (entidade.h + entidade.c). Este arquivo (o
+ * programa principal) apenas INCLUI o cabe√ßalho e usa a interface
+ * p√∫blica do m√≥dulo -- ele n√£o precisa saber COMO essas fun√ß√µes s√£o
  * implementadas, apenas O QUE elas fazem.
  *
- * A coleÁ„o de entidades (o vetor de ponteiros e as funÁıes que o
- * gerenciam) continua aqui no programa principal, pois È uma regra
- * especÌfica DESTE jogo, e n„o do mÛdulo genÈrico de Entidade.
+ * A cole√ß√£o de entidades (o vetor de ponteiros e as fun√ß√µes que o
+ * gerenciam) continua aqui no programa principal, pois √© uma regra
+ * espec√≠fica DESTE jogo, e n√£o do m√≥dulo gen√©rico de Entidade.
  *
  * Conceitos praticados:
- *   - separaÁ„o de um programa em m˙ltiplos arquivos (.h e .c)
- *   - compilaÁ„o separada + linkagem (cada .c vira um .o)
- *   - reuso de um mÛdulo por diferentes programas
- *   - vetor de ponteiros para struct, enum, union e alocaÁ„o
- *     din‚mica (revis„o das atividades anteriores)
+ *   - separa√ß√£o de um programa em m√∫ltiplos arquivos (.h e .c)
+ *   - compila√ß√£o separada + linkagem (cada .c vira um .o)
+ *   - reuso de um m√≥dulo por diferentes programas
+ *   - vetor de ponteiros para struct, enum, union e aloca√ß√£o
+ *     din√¢mica (revis√£o das atividades anteriores)
  *
  * Compilar (Linux, com raylib instalada):
  *   gcc atividade8.c entidade.c -o atividade8 -lraylib -lm -lpthread -ldl -lrt -lX11
@@ -56,7 +56,8 @@ int main(void) {
 
     InitWindow(LARGURA_JANELA, ALTURA_JANELA, "Atividade 8 - Modulos em C");
     SetTargetFPS(60);
-
+    
+    // todas as chamadas abaixo usam apenas a interface p√∫blica do m√≥dulo entidade.h
     Entidade *jogador = entidadeCriar(ENTIDADE_JOGADOR,
                         (Vector2){ LARGURA_JANELA / 2.0f, ALTURA_JANELA / 2.0f });
     adicionarEntidade(jogador);
