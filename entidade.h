@@ -1,13 +1,13 @@
 /*
- * entidade.h - Módulo de Entidade (interface)
+ * entidade.h - MÃ³dulo de Entidade (interface)
  * ---------------------------------------------------------------
- * Arquivo de CABEÇALHO: declara os tipos (enum, union, struct) e os
- * protótipos das funções do módulo "entidade". Qualquer arquivo .c
- * que precisar usar uma Entidade só precisa dar #include "entidade.h".
+ * Arquivo de CABEÃ‡ALHO: declara os tipos (enum, union, struct) e os
+ * protÃ³tipos das funÃ§Ãµes do mÃ³dulo "entidade". Qualquer arquivo .c
+ * que precisar usar uma Entidade sÃ³ precisa dar #include "entidade.h".
  *
- * Nesta atividade a struct Entidade ainda é visível para quem inclui
- * o cabeçalho (módulo comum) -- a diferença para um TAD (atividade9)
- * é que lá a struct fica ESCONDIDA, só acessível através de funções.
+ * Nesta atividade a struct Entidade ainda Ã© visÃ­vel para quem inclui
+ * o cabeÃ§alho (mÃ³dulo comum) -- a diferenÃ§a para um TAD (atividade9)
+ * Ã© que lÃ¡ a struct fica ESCONDIDA, sÃ³ acessÃ­vel atravÃ©s de funÃ§Ãµes.
  */
 
 #ifndef ENTIDADE_H
@@ -27,11 +27,11 @@ typedef union {
 } ExtraEntidade;
 
 typedef struct {
-    TipoEntidade    tipo;
-    Vector2         pos;
-    float           raio;
-    int             vida;
-    Color           cor;
+    TipoEntidade   tipo;
+    Vector2        pos;
+    float          raio;
+    int            vida;
+    Color          cor;
     ExtraEntidade extra;
 } Entidade;
 
