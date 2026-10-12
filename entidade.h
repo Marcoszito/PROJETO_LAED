@@ -27,11 +27,11 @@ typedef union {
 } ExtraEntidade;
 
 typedef struct {
-    TipoEntidade   tipo;
-    Vector2        pos;
-    float          raio;
-    int            vida;
-    Color          cor;
+    TipoEntidade  tipo;
+    Vector2       pos;
+    float         raio;
+    int           vida;
+    Color         cor;
     ExtraEntidade extra;
 } Entidade;
 
